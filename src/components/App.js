@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import Adapter from 'enzyme-adapter-react-16';
+// import Adapter from 'enzyme-adapter-react-16';
 
 class App extends Component {
   constructor() {
@@ -26,6 +26,15 @@ class App extends Component {
     return (
       <div>
        <h2>Gift Giver</h2>
+       <div className='gift-list'>
+        {
+          this.state.gifts.map(gift => {
+           return (
+            <div></div>
+           )
+          })
+        }
+       </div>
        <Button className='btn-add' onClick={this.addGift}>Add Gift</Button>
       </div>
     )
